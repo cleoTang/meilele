@@ -51,7 +51,7 @@
           checked="{{allcheck}}"
           bindtap='all'/>全选</view>
         <view class="price">合计：￥{{totalMoney}}</view>
-        <view class="btn-click">结算（{{checkoutNum}}）</view>
+        <view class="btn-click" bindtap='addToBuy'>结算（{{checkoutNum}}）</view>
       </view>
   </view>
 </view>

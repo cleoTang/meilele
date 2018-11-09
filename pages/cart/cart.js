@@ -64,10 +64,12 @@ Page({
   all(){
     app.changeAllCheck();
     const money = app.total();
+    const num = app.totalNum();
     this.setData({
       cartItem: app.cart,
       totalMoney: money,
       allcheck: app.allCheckout,
+      checkoutNum: num
     });
   },
   // 删除
@@ -102,6 +104,28 @@ Page({
     wx.switchTab({
       url: '/pages/mall/mall'
     })
+  },
+  addToBuy(){
+    console.log("xxx");
+    const logininfo = wx.getStorageSync('userinfo');
+    if (logininfo){
+      wx.navigateTo({
+        url: '/pages/buy/buy',
+      })
+    }else{
+      wx.showModal({
+        title: '您还没有登录！',
+        content: '点击确认登录',
+        confirmColor: "red",
+        success: function (res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

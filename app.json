@@ -6,7 +6,8 @@
     "pages/mine/mine",
     "pages/detail/detail",
     "pages/login/login",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/buy/buy"
   ],
   "window":{
     "backgroundTextStyle":"light",
