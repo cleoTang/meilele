@@ -120,10 +120,12 @@ Page({
     });
     app.setBadge();
     const money = app.total();
+    const num = app.totalNum();
     this.setData({
       cartItem: app.cart,
       totalMoney: money,
       allcheck: app.allCheckout,
+      checkoutNum: num,
     });
     this.all();
   },

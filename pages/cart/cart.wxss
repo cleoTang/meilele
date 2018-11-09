@@ -1,4 +1,5 @@
 /* pages/cart/cart.wxss */
+page{width: 100%;}
 .new-cart text{
   font-size: 30rpx;
   color: #dedede;

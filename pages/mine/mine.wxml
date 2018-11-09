@@ -10,7 +10,7 @@
       </view>
       <view class="login-btn" wx:else>
           <view class="nonelogined"><image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541695429829&di=267d8fdac2e8ef6da38ba1816393b416&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01eca8554300470000019ae9c5354a.jpg'></image></view>
-         <view>还没有登录，点击下面登录哦~~</view>
+         <view class="textinfo">还没有登录，点击下面登录哦~~</view>
          <button size="mini" bindtap='toLoginBtn' type="warn">登录</button>
       </view>
       <view class="nav-icon">
@@ -55,15 +55,15 @@
         <text>待发货</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/lip.png'></image>
         <text>待收货</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/pnglun.png'></image>
         <text>待评价</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/souhuo.png'></image>
         <text>售后服务</text>
       </view>
     </view>
@@ -76,19 +76,19 @@
     </view>
     <view class="order-nav">
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/youhuijuan.png'></image>
         <text>我的优惠券</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/lip.png'></image>
         <text>我的红包</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/jinbi2.png'></image>
         <text>我的乐币</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/jinbi.png'></image>
         <text>我的金币</text>
       </view>
     </view>
@@ -105,7 +105,7 @@
         <text>退款明细</text>
       </view>
       <view>
-        <image src='../../libs/img/chaxun.png'></image>
+        <image src='../../libs/img/baohu.png'></image>
         <text>申请保价</text>
       </view>
       <view>

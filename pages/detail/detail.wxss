@@ -1,5 +1,6 @@
 page{
   width: 100%;
+  overflow-x: hidden;
 }
 .detail{
   width: 100%;
@@ -50,7 +51,7 @@ page{
   padding-bottom: 10px;
 }
 .msg{
-  width: 100%;
+  width: 720rpx;
   height: 330rpx;
   border-top: 10px solid #eeebeb; 
   border-bottom: 10px solid #eeebeb; 
