@@ -1,0 +1,124 @@
+<view class="mine">
+  <view class="mine-title">
+    <view class="mine-title-name">
+      <view class="info" wx:if="{{userimg}}" >
+        <image class='pic' src='{{userimg}}'></image>
+        <view class="user-info">
+          <view>{{username}}</view>
+          <view>lv23</view>
+        </view>
+      </view>
+      <view class="login-btn" wx:else>
+          <view class="nonelogined"><image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541695429829&di=267d8fdac2e8ef6da38ba1816393b416&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01eca8554300470000019ae9c5354a.jpg'></image></view>
+         <view>还没有登录，点击下面登录哦~~</view>
+         <button size="mini" bindtap='toLoginBtn' type="warn">登录</button>
+      </view>
+      <view class="nav-icon">
+        <view bindtap='toLoginBtn12'><image  src='../../libs/img/shezhi.png'></image></view>
+        <view><image src='../../libs/img/msg.png'></image></view>
+      </view>
+      <view class="module" wx:if="{{ishowModule}}">
+          <view class="cancelBtn" bindtap='cancelBtn'><image src="../../libs/img/tuichu.png"></image></view>
+          <view>我的会员卡</view>
+          <view>我的积分</view>
+          <view>联系客服</view>
+          <view bindtap='logoutBtn'>退出登录</view>
+      </view>
+    </view>
+    <view class="icon">
+      <view>
+        <image src='../../libs/img/cart1.png'></image>
+        <text>购物车</text>
+      </view>
+      <view>
+        <image src='../../libs/img/souchang.png'></image>
+        <text>我的收藏</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>自助查询</text>
+      </view>
+    </view>
+  </view>
+  <view class="order">
+    <view class="order-title">
+      <image src='../../libs/img/bag.png'></image>
+      <text>我的订单</text>
+    </view>
+    <view class="order-nav">
+      <view>
+        <image src='../../libs/img/fuk.png'></image>
+        <text>待付款</text>
+      </view>
+      <view>
+        <image src='../../libs/img/fahuo.png'></image>
+        <text>待发货</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>待收货</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>待评价</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>售后服务</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="order">
+    <view class="order-title">
+      <image src='../../libs/img/12.png'></image>
+      <text>我的钱包</text>
+    </view>
+    <view class="order-nav">
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>我的优惠券</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>我的红包</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>我的乐币</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>我的金币</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="order">
+    <view class="order-title">
+      <image src='../../libs/img/34.png'></image>
+      <text>客户服务</text>
+    </view>
+    <view class="order-nav">
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>退款明细</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>申请保价</text>
+      </view>
+      <view>
+        <image src='../../libs/img/chaxun.png'></image>
+        <text>纠纷投诉</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="order1">
+    <view class="order1-title">
+      <image src='../../libs/img/111.png'></image>
+      <text>最近浏览</text>
+    </view>
+  </view>
+</view>

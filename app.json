@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mall/mall",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美乐乐",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#666666",
+    "selectedColor": "#c81c28",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "libs/img/index.png",
+        "selectedIconPath": "libs/img/index-active.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "全部商品",
+        "iconPath": "libs/img/mall.png",
+        "selectedIconPath": "libs/img/mall-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "libs/img/cart.png",
+        "selectedIconPath": "libs/img/cart-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的订单",
+        "iconPath": "libs/img/mine.png",
+        "selectedIconPath": "libs/img/mine-active.png"
+      }
+    ]
+  }
+}

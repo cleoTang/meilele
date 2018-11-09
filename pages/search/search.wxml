@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <view class="inputBorder1">
+     <input class="inputBorder"
+      placeholder="搜索商品" 
+      bindblur="bindKeyInput"
+      value="{{value}}"
+      confirm-type="done"
+      type="text" focus="true"/>
+     <view class="btn" bindtap='searchBtn'>搜索</view>
+  </view>
+  <view class="hotsearch">
+    <view class="title">
+      <image src="../../libs/img/hot.png"></image>
+      <text>热门搜索</text>
+    </view>
+    <view class="list">
+      <view 
+      wx:for="{{hotSearch}}" 
+      wx:key="{{index}}"
+      bindtap='tomallBtn'>{{item}}</view>
+    </view>
+  </view>
+  <view class="hotsearch">
+    <view class="title">
+      <image src="../../libs/img/time.png"></image>
+      <text>历史搜索</text>
+      <view class="deleteBtn" bindtap='clearList'>
+         <image src="../../libs/img/delete.png"></image>
+      </view>
+    </view>
+    <view class="list">
+     <view wx:for="{{timeSearch}}"
+      bindtap='tomallBtn'
+      wx:key="{{index}}">{{item}}</view>
+    </view>
+  </view>
+</view>

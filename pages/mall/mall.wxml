@@ -1,0 +1,23 @@
+<view class="likelist">
+    <scroll-view
+    scroll-y
+    bindscrolltolower='loadMore'
+    class='scroll-list'
+    >
+    <view class="likelist-nav">
+        <view class="item" 
+        wx:for="{{likeProduct}}" 
+        wx:key="{{index}}"
+        catchtap="toDetail"
+        data-item="{{item}}"
+        >
+          <image src="http://image.meilele.com/{{item.goods_thumb}}"></image>
+          <view>
+            <view class="item-price"> ￥{{item.show_price}}</view>
+            <view class="item-desc">{{item.new_goods_name}}</view>
+            <view class="item-num">已售{{item.last_month_sold_count}}</view>
+          </view>
+        </view>
+     </view>
+    </scroll-view>
+</view>

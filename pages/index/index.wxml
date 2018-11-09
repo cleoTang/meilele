@@ -1,0 +1,238 @@
+<!--pages/index/index.wxml-->
+<view class='ml-index'>
+  <view class='ml-index-header'>
+    <view>美乐乐</view>
+    <view class='ml-index-input' style="background: #fff url(../../libs/img/sousuo.png) no-repeat center left;background-size: 10%;">
+     <input placeholder="搜索商品"  bindfocus="toSearch"/>
+    </view>
+    <view>
+      <text bindtap='onGetLocation' wx:if="{{locationCity === ''}}">定位中</text>
+      <text wx:else>{{locationCity}}</text>
+    </view>
+  </view>
+  <view class="main">
+    <view class='ml-index-swiper'>
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item >
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='nav' style="background: #fff url(//image.meilele.com/images/201810/1540420063702598409.png) no-repeat top center;background-size: 140%;">
+      <view wx:for="{{navImages}}" wx:key="{{index}}" bindtap='tomallclick'>
+       <image src='{{item.url}}'></image>
+       <text>{{item.title}}</text>
+      </view>
+    </view>
+    <view class="list">
+      <view class="list-img">
+        <image src=" //image.meilele.com/images/201810/1540948061991272246.png"></image>
+      </view>
+      <view class='list-product'>
+        <image catchtap="toDetail" src='//img003.mllres.com//images/upload/201810/1f9bd296a9008bfce4ddb80121a879fd.png'></image>
+        <image src='//img003.mllres.com//images/upload/201810/1f9bd296a9008bfce4ddb80121a879fd.png'></image>
+        <image src='//img003.mllres.com//images/upload/201810/1f9bd296a9008bfce4ddb80121a879fd.png'></image>
+        <image src='//img003.mllres.com//images/upload/201810/1f9bd296a9008bfce4ddb80121a879fd.png'></image>
+      </view>
+    </view>
+    <view class="buy-limit"> 
+      <view class="icon-title">
+        <text>限时抢购</text>
+        <image src='../../libs/img/icon.png'></image>
+      </view>
+      <view class="wrap">
+        <view class="slider">
+          <view class="slider-list" wx:for="{{sliderImg}}" wx:key="{{item.id}}">
+           <view class="slider-list-img">
+            <image src='{{item.imgUrl}}'></image>
+           </view>
+           <view class='slider-list-title'>
+            <view class="time">倒计时</view>
+            <view>木质沙发 简约</view>
+            <view class="price">
+              <view class="new-price">￥1233</view>
+              <view class="old-price">￥1533</view>
+            </view>
+           </view>
+          </view>
+        </view>
+      </view>
+      <!-- 新品首发 -->
+      <view class="new-product">
+        <view class="icon-title">
+          <text>新品首发</text>
+          <image src='../../libs/img/icon.png'></image>
+        </view>
+        <view class="new-product-img">
+          <view class="left" >
+             <image src='//img002.mllres.com//images/upload/201810/f1fa9c99184827101d1d30a147e80c33.jpg'></image>
+          </view>
+          <view class="right">
+            <view class="right-top">
+              <image src='//img002.mllres.com//images/upload/201810/0d21f653b1848dd00e1feec90467d994.jpg'></image>
+            </view>
+            <view class="right-bottom" >
+              <image src='//img002.mllres.com//images/upload/201810/a016b886c7f490713b27d023f1fabefe.jpg'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="tab-content">
+        <view class="icon-title">
+          <text>全屋套系</text>
+          <image src='../../libs/img/icon.png'></image>
+        </view>
+        <!-- 选项卡 -->
+        <view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar" >
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <view class="index-img"><image src='//img002.mllres.com//images/upload/201810/1106c5a8eda29d97ccbb0430deaa97db.jpg'></image></view>
+                  <view class="smll-img">
+                    <view>
+                      <image src='//image.meilele.com//images/small/366/width/210/height/210/mode/1/encrypt/3729369990079983548061f7cb09cb0d/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHNAHBJxY6SZ5QeRCaPvtThHn+TSgP0rYhX+Ol7ra02OSw==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                   <view>
+                      <image src='//img001.mllres.com//images/small/162/width/210/height/210/mode/1/encrypt/1a3083569d15ecfa663974fd96eacad1/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHPZkkcIF_aNeGJ3cpetDwXTpg1P6OKlOOcXtjoovt373A==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                    <view>
+                      <image src='//img002.mllres.com//images/small/108/width/210/height/210/mode/1/encrypt/e79d911f16d233325a6ec8255eab5156/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHPK9wXcOnEO2r8Bl295Qyi3N8tolH5vVJhVxMAsvt_BAg==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                   <view class="index-img"><image src='//img004.mllres.com//images/upload/201810/62b50626693fd2bc2818dc00bdb37b78.jpg'></image></view>
+                  <view class="smll-img">
+                    <view>
+                      <image src='//img003.mllres.com//images/small/381/width/210/height/210/mode/1/encrypt/c1e81c8db8a8992dcf1de3ea0594a4fd/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHOfswgW+ef_PmrrlE3RWOQnNuf5J56g_8MpNF_ztRA2Sw==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                   <view>
+                      <image src='//img003.mllres.com//images/small/214/width/210/height/210/mode/1/encrypt/e0714db6df16f399ecbbb10fa23382a4/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHNQ8eSe3EkB7ZP+rqkbj3TuoXAzbEtyTyaf5hY0hS6AgQ==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                    <view>
+                      <image src='//img003.mllres.com//images/small/121/width/210/height/210/mode/1/encrypt/30a641e74f125e8054565cc3fe7f3e46/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHOtm3SD5WgO0ulu97yaS4a29VVdA2FhJyOGE0xf2SMnyw==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                   <view class="index-img"><image src='//img001.mllres.com//images/upload/201810/912690b55194609d2a44f594f1c5081d.jpg'></image></view>
+                  <view class="smll-img">
+                    <view>
+                      <image src='//image.meilele.com//images/small/366/width/210/height/210/mode/1/encrypt/3729369990079983548061f7cb09cb0d/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHNAHBJxY6SZ5QeRCaPvtThHn+TSgP0rYhX+Ol7ra02OSw==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                   <view>
+                      <image src='//img001.mllres.com//images/small/162/width/210/height/210/mode/1/encrypt/1a3083569d15ecfa663974fd96eacad1/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHPZkkcIF_aNeGJ3cpetDwXTpg1P6OKlOOcXtjoovt373A==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                    <view>
+                      <image src='//img002.mllres.com//images/small/108/width/210/height/210/mode/1/encrypt/e79d911f16d233325a6ec8255eab5156/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHPK9wXcOnEO2r8Bl295Qyi3N8tolH5vVJhVxMAsvt_BAg==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                   <view class="index-img"><image src='//image.meilele.com//images/upload/201810/330f816c331b07114a9fe348683230d1.jpg'></image></view>
+                  <view class="smll-img">
+                    <view>
+                      <image src='//image.meilele.com//images/small/366/width/210/height/210/mode/1/encrypt/3729369990079983548061f7cb09cb0d/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHNAHBJxY6SZ5QeRCaPvtThHn+TSgP0rYhX+Ol7ra02OSw==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                   <view>
+                      <image src='//img001.mllres.com//images/small/162/width/210/height/210/mode/1/encrypt/1a3083569d15ecfa663974fd96eacad1/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHPZkkcIF_aNeGJ3cpetDwXTpg1P6OKlOOcXtjoovt373A==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                    <view>
+                      <image src='//img002.mllres.com//images/small/108/width/210/height/210/mode/1/encrypt/e79d911f16d233325a6ec8255eab5156/path/YKkxtD0+l8CT6mdTP0jUTosXyzGqRaYb484nDncYwHPK9wXcOnEO2r8Bl295Qyi3N8tolH5vVJhVxMAsvt_BAg==.jpg'></image>
+                      <view class="text">
+                        <text>黄牛皮座椅</text>
+                        <text class="price">￥3196</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+            </view>
+        </view>
+    </view>
+     </view>
+      </view>
+
+    </view>
+  </view>
+  <view class="likelist">
+    <view class="likelist-title">猜你喜欢</view>
+    <scroll-view
+    scroll-y
+    bindscrolltolower='loadMore'
+    class='scroll-list'
+    >
+    <view class="likelist-nav">
+        <view class="item" 
+        wx:for="{{likeProduct}}" 
+        wx:key="{{index}}"
+        catchtap="toDetail"
+        data-item="{{item}}"
+        >
+          <image src="http://image.meilele.com/{{item.goods_thumb}}"></image>
+          <view>
+            <view class="item-price"> ￥{{item.show_price}}</view>
+            <view class="item-desc">{{item.new_goods_name}}</view>
+            <view class="item-num">已售{{item.last_month_sold_count}}</view>
+          </view>
+        </view>
+     </view>
+    </scroll-view>
+  </view>
+</view>

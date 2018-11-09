@@ -1,0 +1,57 @@
+<view class="none-cart">
+  <view wx:if="{{cartItem.length ==0}}" class="new-cart" style="padding-top:180px;padding-bottom:100px;background:url(//image.meilele.com/wap/images/nodata/nodata_02.png) center 74px no-repeat;text-align:center;background-size:100px;">
+    <text>您还没有加入任何商品</text>
+    <view bindtap='tomall'>随便逛逛</view>
+  </view>
+  <view class="cart" wx:else>
+      <view class="title">
+        <view>美乐乐</view>
+      </view>
+      <view class="content">
+
+        <view 
+        class="item"
+        wx:for="{{cartItem}}"
+        wx:key="{{index}}">
+          <view>
+            <checkbox
+            color="#db212e"
+            checked="{{item.checked}}"
+            bindtap="changecheck"
+            data-id="{{item.id}}"
+            />
+          </view>
+          <view class="img">
+            <image src="http://image.meilele.com/{{item.img}}"></image>
+          </view>
+          <view class="desc">
+            <view class="desc-title">
+              <view class="desc-title-name">{{item.title}}</view>
+              <view class="desc-title-price">￥{{item.price}}</view>
+            </view>
+            <view class="desc-btn">
+              <view class="desc-btn-click">
+                <text bindtap="reduce" data-id="{{item.id}}">-</text>
+                <text class="count">{{item.count}}</text>
+                <text bindtap="add" data-id="{{item.id}}">+</text>
+              </view>
+              <view class="delete" bindtap="delete" data-id="{{item.id}}">
+                <image src='../../libs/img/delete.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        
+      </view>
+      <view class="none"></view>
+      <view class="btn">
+        <view class="left">
+          <checkbox
+          color="#db212e"
+          checked="{{allcheck}}"
+          bindtap='all'/>全选</view>
+        <view class="price">合计：￥{{totalMoney}}</view>
+        <view class="btn-click">结算（{{checkoutNum}}）</view>
+      </view>
+  </view>
+</view>

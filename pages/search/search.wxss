@@ -1,0 +1,57 @@
+/* pages/search/search.wxss */
+.search{
+  width: 100%;
+  height: 100%;
+}
+.inputBorder1{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  color: #7a7979;
+  padding: 0 10px;
+}
+.inputBorder{
+  width: 576rpx;
+  height: 60rpx;
+  border: 1px solid #dedede;
+  border-radius: 7px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+.hotsearch{
+  width: 100%;
+  height: 100%;
+  padding: 30rpx;
+}
+.title{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  font-size: 36rpx;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.title image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10px;
+}
+.list{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 34rpx;
+  color: #7a7979;
+}
+.list view{
+  padding: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border: 1px solid #e0dede;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.deleteBtn{
+  margin-left: 50%;
+}

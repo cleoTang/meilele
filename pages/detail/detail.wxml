@@ -1,0 +1,42 @@
+<view 
+class="detail">
+  <view class="swiper">
+    <image src="http://image.meilele.com/{{proInfo.img}}"></image>
+  </view>
+  <view class="main">
+    <view class="price">
+      <view class="newprice">￥{{proInfo.price}}</view>
+      <view>已售89</view>
+    </view>
+    <view class="title">{{proInfo.title}}</view>
+    <view class="link">双十一立减双十一立减双十一立减双十一立减双十一立减</view>
+    <view class='msg'>
+      <view class="active">活动：限时促销{{proInfo.id}}</view>
+      <view class="type"><text>已选：1.4米餐厅套装</text></view>
+      <view class="address">
+        送至：
+        <image src='../../libs/img/cart1.png'></image>
+        请选择配送区域
+      </view>
+    </view>
+    <view class="pr-info">
+      <view></view>
+    </view>
+  </view>
+  <view class="none"></view>
+  <view class="btn">
+    <view>
+      <image src='../../libs/img/souchang.png'></image>
+      <text>收藏</text>
+    </view>
+    <view>
+      <image src='../../libs/img/msg.png'></image>
+      <text>客服</text>
+    </view>
+    <view bindtap='addTo'>
+      <image src='../../libs/img/cart1.png'></image>
+      <text>购物车</text>
+    </view>
+    <view class="addtocart" bindtap="addtocart" data-item="{{proInfo}}">加入购物车</view>
+  </view>
+</view>

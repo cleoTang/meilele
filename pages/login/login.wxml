@@ -1,0 +1,13 @@
+<view>
+    <view class='header'>
+        <image src='http://i0.hdslb.com/bfs/archive/438bd205462c98c6144be738882b5c42b4d10da8.jpg'></image>
+    </view>
+ 
+    <view class='content'>
+        <view>美乐乐申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+ 
+    <button class='bottom'  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录 </button>
+</view>
+

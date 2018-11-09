@@ -1,0 +1,135 @@
+/* pages/cart/cart.wxss */
+.new-cart text{
+  font-size: 30rpx;
+  color: #dedede;
+}
+.new-cart view{
+  width: 25%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #c81c28;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+  color: white;
+  margin: 20rpx auto;
+}
+.cart{
+  width: 97%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rpx;
+}
+.title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.title checkbox{
+  margin-right: 20rpx;
+}
+.content{
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.item{
+  width: 100%;
+  height: 230rpx;
+  padding: 10rpx 0;
+  display: flex;
+  align-items: center;
+  border-top: 2rpx dotted #dedede;
+  margin-top: 20rpx;
+}
+.img{
+  width: 270rpx;
+  height: 200rpx;
+  margin: 0 30rpx;
+  margin-top: 40rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.desc{
+  width: 60%;
+  height: 180rpx;
+}
+.desc-title{
+  font-size: 30rpx;
+  color: #666666;
+  width: 100%;
+  height: 150rpx;
+}
+.desc-title-name{
+  width: 100%;
+  height: 90rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+.desc-title-price{
+  width: 100%;
+  height: 40rpx;
+  color: #c81c28;
+  font-weight: bolder;
+}
+.desc-btn{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.desc-btn-click{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border: 2rpx solid #dedede
+}
+.desc-btn-click text{
+  width: 60rpx;
+  height: 100%;
+}
+.count{
+  border-left: 2rpx solid #dedede;
+  border-right:2rpx solid #dedede; 
+}
+.delete{
+  width: 50rpx;
+  height: 50rpx;
+}
+.delete image{
+  width: 100%;
+  height: 100%;
+}
+.none{
+  width: 100%;
+  height: 100rpx;
+}
+.btn{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  bottom: 0;
+  left: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  background: white;
+  position: fixed;
+}
+.price{
+  color: #e21b28;
+}
+.btn-click{
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  background: #db212e;
+  color: white;
+  font-size: 40rpx;
+}
