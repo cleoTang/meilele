@@ -50,7 +50,12 @@
             <image src='{{item.imgUrl}}'></image>
            </view>
            <view class='slider-list-title'>
-            <view class="time">倒计时</view>
+            <view class="time">
+              <view class="voteText countDownTimeText">{{countDownDay}}天</view>
+              <view class="voteText countDownTimeText">{{countDownHour}}时</view>
+              <view class="voteText countDownTimeText">{{countDownMinute}}分</view>
+              <view class="voteText countDownTimeText">{{countDownSecond}}秒</view>
+            </view>
             <view>木质沙发 简约</view>
             <view class="price">
               <view class="new-price">￥1233</view>

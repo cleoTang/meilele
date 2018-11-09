@@ -140,7 +140,7 @@ input{
   text-decoration: line-through;
 }
 .time{
-  width: 100%;
+  width: 300rpx;
   height: 50rpx;
   line-height: 50rpx;
   text-align: center;
@@ -149,6 +149,11 @@ input{
   font-size: 20rpx;
   border-radius: 10rpx;
   margin-top: 20rpx;
+  display: flex;
+  padding-left:30rpx;
+}
+.time view{
+  margin-right: 10rpx;
 }
 .new-product{
   width: 100%;
